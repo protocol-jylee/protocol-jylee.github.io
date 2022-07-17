@@ -48,8 +48,8 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: https://github.com/protocol-jylee
-repository_tree: 
+repository: https://github.com/protocol-jylee/protocol-jylee.github.io
+repository_tree: master
 
 
 ## => Paths
