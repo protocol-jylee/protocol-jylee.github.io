@@ -20,7 +20,7 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://protocol-jylee.github.io
 baseurl : https://protocol-jylee.github.io
-title   : 이재윤의 기술 블로그
+title   : Jylee.Log
 description: > # this means to ignore newlines until "Language & timezone"
   오만가지 다 적는 난장판 하우스
 
@@ -34,8 +34,8 @@ timezone: Asia/Seoul
 ## => Author and Social
 ##############################
 author:
-  type      : "person"
-  name      : Lee JaeYun
+  type      : person
+  name      : LeeJaeYun
   url       : https://protocol-jylee.github.io
   avatar    : https://mblogthumb-phinf.pstatic.net/MjAxOTEyMDdfMyAg/MDAxNTc1NjkzMTAyODEx.OzeXWrjo5920znqNAwHfMWDrb_frRVXe02Nc235BHg0g.HWEfMpAKstVml8LbSz7yIPoZywBIdD54ct7AJsOMirEg.JPEG.eazil1/KakaoTalk_20191207_132905140_01.jpg?type=w800
   bio       : I am an amazing person.
