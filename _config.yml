@@ -19,8 +19,8 @@
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://protocol-jylee.github.io
-baseurl : https://protocol-jylee.github.io
-title   : Jylee.Log
+baseurl : /
+title   : "Jylee.Log"
 description: > # this means to ignore newlines until "Language & timezone"
   오만가지 다 적는 난장판 하우스
 
@@ -48,7 +48,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: https://github.com/protocol-jylee/protocol-jylee.github.io
+repository: protocol-jylee/protocol-jylee.github.io
 repository_tree: master
 
 
@@ -111,11 +111,11 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: "disqus" # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
-    shortname: # the Disqus shortname for the site
+    shortname: "jylee "
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
