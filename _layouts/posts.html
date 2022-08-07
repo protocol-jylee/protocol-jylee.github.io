@@ -3,7 +3,7 @@ layout: articles
 title: Posts
 show_title: false
 articles:
-  data_source: paginator.posts
+  data_source: site.posts
   article_type: BlogPosting
   show_cover: false
   show_excerpt: true
@@ -14,6 +14,7 @@ articles:
 <div class="layout--home">
   {%- include paginator.html -%}
 </div>
+
 <script>
   {%- include scripts/home.js -%}
 </script>
