@@ -22,12 +22,12 @@ url     : https://protocol-jylee.github.io
 baseurl : /
 title   : "jylee.tech.log"
 description: > # this means to ignore newlines until "Language & timezone"
-  오만가지 기술 "다" 적는 난장판 하우스
+  글과 태그로 완성하는 감성 기술 블로그
 
 
 ## => Language and Timezone
 ##############################
-lang: ko-KR
+lang: en
 timezone: Asia/Seoul
 
 
@@ -40,10 +40,10 @@ author:
   avatar    : https://mblogthumb-phinf.pstatic.net/MjAxOTEyMDdfMyAg/MDAxNTc1NjkzMTAyODEx.OzeXWrjo5920znqNAwHfMWDrb_frRVXe02Nc235BHg0g.HWEfMpAKstVml8LbSz7yIPoZywBIdD54ct7AJsOMirEg.JPEG.eazil1/KakaoTalk_20191207_132905140_01.jpg?type=w800
   bio       : I am an amazing person.
   email     : leejaeyun95@kakao.com
-  facebook  : https://www.facebook.com/jylee
-  twitter   : https://twitter.com/jylee
-  linkedin  : https://www.linkedin.com/in/jylee
-  github    : https://github.com/jylee
+  facebook  : 
+  twitter   : 
+  linkedin  : "%EC%9E%AC%EC%9C%A4-%EC%9D%B4-b02884192"
+  github    : protocol-jylee
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
