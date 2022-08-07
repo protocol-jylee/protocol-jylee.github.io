@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Page - Article Header Overlay Background Fill (Immersive + Translucent Header)
-tags: tq qtq
+tags: tag tag1
 mode: immersive
 header:
   theme: dark
@@ -19,18 +19,18 @@ author: author
 
 <!--more-->
 
-# tlqkf
+# HEADER
 
-## rotoRL
+## HEADER
 
-### TId
+### HEADER
 
 
-# tlqkf
+# HEADER
 
-## rotoRL
+## HEADER
 
-### TId
+### HEADER
 
 A post has an image article header in immersive mode with a translucent header.
 

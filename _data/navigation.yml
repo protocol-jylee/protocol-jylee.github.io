@@ -1,6 +1,15 @@
 header:
   - titles:
       # @start locale config
+      en      : &EN       Posts
+      en-US   : *EN
+      ko      : &KO       글
+      ko-KR   : *KO
+      # @end locale config
+    url: /posts.html
+
+  - titles:
+      # @start locale config
       en      : &EN       Archive
       en-GB   : *EN
       en-US   : *EN
