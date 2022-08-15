@@ -18,6 +18,8 @@ author: author
 - docker desktop 쿠버네티스(<strong>이하 docker 쿠베</strong>)의 hostpath 사용 시, 마운트 패스와 노드에 실제 마운트 된 경로가 서로 다르다는 걸 알자. <br>
 <br>
 
+<!--more-->
+
 ### 글 작성 배경: 
 - jenkins helm chart를 배포해보려고 docker 쿠베를 써봤는데 mount path permission denied. 오류 때문에 시간 많이 잡아먹은게 열 받아서 기록을 남김. <br>
 <br>
@@ -29,7 +31,6 @@ author: author
 
 -> 내가 파악한 범위에서 꼭 필요한 키워드만 뽑아서 검색하고 해결방법을 적용해본다. 그래도 안되면 아예 다른 접근을 시도해본다.
 
-<!--more-->
 <br>
 
 # 테스트에 사용된 hostpath YAML이에요.
