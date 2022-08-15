@@ -35,7 +35,7 @@ author: author
 
 # 테스트에 사용된 hostpath YAML이에요.
 [쿠버네티스 공식문서](https://kubernetes.io/ko/docs/concepts/storage/volumes/#hostpath-fileorcreate-example)에서 가져왔습니다!
-```
+```YAML
 apiVersion: v1
 kind: Pod
 metadata:

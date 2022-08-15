@@ -37,12 +37,60 @@ sync 주기를 1초로 설정한 서버 5대를 gitlab 서버에 연결한 결�
 <br>
 
 # 아키텍쳐 설명
-![Default](https://raw.githubusercontent.com/protocol-jylee/protocol-jylee.github.io/master/assets/images/git-sync-architecture.png)
+| `코드 흐름` | `설명` |
+| ---  |  --- |
+| ![아키텍쳐 코드 흐름](https://raw.githubusercontent.com/protocol-jylee/protocol-jylee.github.io/master/assets/images/git-sync-architecture.png) | git sync 컨테이너가 gitlab 서버에 연결됩니다. <br> git lab 서버로 커밋이 발생하면 git sync는 해당 코드를 가져와서 empty dir에 덮어쓰기 합니다. <br> 그렇게 empty dir에는 늘 최신 코드가 존재합니다. <br> 백엔드 서버는 empty dir에서 코드를 가져온 뒤 서버를 재실행합니다. |
 
 <br>
 
 # git sync
+## git sync 사용
+git sync 오픈소스는 [여기](https://github.com/kubernetes/git-sync/tree/v3.3.5)에서 다운받을 수 있습니다. 저는 환경변수를 사용하기 위해 `v3.3.5` 버전을 적용했습니다.
+
+컨테이너 1과 컨테이너 2가 하나의 empty dir(git-sync-volume)를 바라보도록 볼륨 마운트 되어 있습니다.
+```YAML
+spec:
+  containers:
+    - name: backend-server # 컨테이너 1
+      image: <my-image-repository>/<my-image>:1
+      command: ['/entrypoint/entrypoint.sh']
+      args: ["start"]
+      tty: true
+      stdin: true
+      ports:
+        - name: http
+          containerPort: 8000
+          protocol: TCP
+      volumeMounts:
+        - name: git-sync-volume
+          mountPath: /git
+
+    - name: git-sync # 컨테이너 2
+      image: <my-image-repository>/git-sync:v3.3.5__linux_amd64
+      args:
+        - --repo=https://gitlab.kismi.re.kr/platform/cloud_automation.git
+        - --branch=develop
+        - --depth=1
+        - --root=/git
+        - --dest=synchronized
+      volumeMounts:
+      - name: git-sync-volume
+        mountPath: /git
+        
+  volumes:
+    - name: git-sync-volume
+      emptyDir: {}
+```
+
 ## git 서버 액세스 설정
+git 서버에 read 및 write 접근 권한이 필요할 경우 계정 인증을 거쳐야합니다.
+공식문서에서 제시하는 방법입니다.
+| Environment | Flag | Description | Default |
+| --- | --- | --- | --- |
+| GIT_SYNC_USERNAME |	--username |	the username to use for git auth | "" |
+| GIT_SYNC_PASSWORD | --password | the password or personal access token to use for git auth. (users should prefer --password-file or env vars for passwords)	 | "" |
+| GIT_SYNC_PASSWORD_FILE | --password-file | the path to password file which contains password or personal access token (see --password) | "" |
+
 ### 1. kubernetes secret 사용
 ### 2. 도커파일 수정
 
